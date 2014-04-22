@@ -1,7 +1,7 @@
 import random
 import string
 
-goal = "To be or not to be; that is the question."
+goal = "To be or not to be? That is the question."
 mutability = 0.01
 
 # INITIALIZE POPULATION
