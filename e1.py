@@ -25,7 +25,7 @@ while unfit:
 
 	for s in population:
 		print s
-			
+				
 		score = 0
 		
 		for i in range(len(s)):
@@ -44,7 +44,7 @@ while unfit:
 		if score >= len(goal):
 			unfit = False
 			winner = s
-					
+						
 	# MATE FITTEST INDIVIDUALS TO PRODUCE A NEW GENERATION OF THE POPULATION
 	next_generation = []
 
