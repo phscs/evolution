@@ -1,3 +1,11 @@
+"""
+NOTE: I fixed our bug. We (rightly) called the sort() function on our list of scores,
+      but we forgot that in sorting our list, the LOWEST scores were listed first.
+      To fix it, I simply called the reverse() function!
+      
+      --Mr. Castle
+"""
+
 import random
 import string
 
@@ -25,7 +33,7 @@ while unfit:
 	scores = []
 	
 	for individual in population:
-		#print individual
+		print individual
 		
 		score = 0
 		
@@ -40,12 +48,8 @@ while unfit:
 			unfit = False
 		
 	scores.sort()
-	for score in scores:
-		print "individual: " + score[1]
-		print "score: " + str(score[0])
-		print ""
+	scores.reverse()
 
-	"""
 	# SELECT THE FITTEST INDIVIDUALS FOR PROCREATION
 	next_generation = []
 	fittest = scores[0:population_size/10]
@@ -76,5 +80,4 @@ while unfit:
 	generations += 1
 	
 print winner
-print "Generations: " + generations
-"""
+print "Generations: " + str(generations)
